@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+// Bringing in our action creator function definition from the reducer
+// also called a dispatcher
 import { updateNameAction } from '../ducks/standardReducerExample';
 
 class Profile extends Component {
@@ -44,11 +46,12 @@ const mapStateToProps = state => state;
 
 // Instead of using a variable for this object, we put it directly as the second
 // argument to our connect method
+// putting our dispatcher on props
 // const mapDispatchToProps = {
 //   updateNameAction
 // }
 
-// let decorator = connect(mapStateToProps, mapDispatchToProps)
+// const decorator = connect(mapStateToProps, mapDispatchToProps)
 // export default decorator(Profile);
 //This is often done in a single line of code like this:
 export default connect(
