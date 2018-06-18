@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import { updateNameAction } from '../ducks/reducer';
+import { updateNameAction } from '../ducks/standardReducerExample';
 
 class Profile extends Component {
   constructor(props) {
@@ -30,6 +30,8 @@ class Profile extends Component {
 // }
 
 // ES6
+// A function that takes the state data from the store
+// and PROVIDES it to the component as props
 const mapStateToProps = state => state;
 
 // Instead of using a variable for this object, we put it directly as the second
@@ -43,5 +45,6 @@ const mapStateToProps = state => state;
 //This is often done in a single line of code like this:
 export default connect(
   mapStateToProps,
+  // using object shorthand, in longform would be { updateNameAction: updateNameAction}
   { updateNameAction }
 )(Profile);
