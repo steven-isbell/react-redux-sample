@@ -2,7 +2,7 @@
 const UPDATE_NAME = 'UPDATE_NAME';
 
 // ACTION CREATORS (ALWAYS RETURN OBJECTS CALLED ACTIONS)
-export function updateName(name) {
+export function updateNameAction(name) {
   return {
     type: UPDATE_NAME,
     payload: name
@@ -19,7 +19,7 @@ const initialState = {
 
 // State is set to initialState by default for initial Application load where
 // no action is dispatched
-export default function reducer(state = initialState, action) {
+export default function standardReducerExample(state = initialState, action) {
   switch (action.type) {
     case UPDATE_NAME:
       return Object.assign({}, state, { name: action.payload });

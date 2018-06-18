@@ -17,7 +17,7 @@ class App extends Component {
               className="App-logo"
               alt="logo"
             />
-            <h1 className="App-title">Welcome to React</h1>
+            <h1 className="App-title">Welcome to Redux</h1>
           </header>
           <Profile />
         </div>

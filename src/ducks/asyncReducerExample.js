@@ -14,7 +14,7 @@ const initialState = {
   isLoading: false
 };
 
-export default function reducer2(state = initialState, action) {
+export default function asyncReducerExample(state = initialState, action) {
   switch (action.type) {
     case `${GET_PEOPLE}_PENDING`:
       return {
@@ -27,5 +27,7 @@ export default function reducer2(state = initialState, action) {
         isLoading: false,
         people: action.payload.data
       };
+    default:
+      return state;
   }
 }
