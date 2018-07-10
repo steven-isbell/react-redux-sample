@@ -6,12 +6,6 @@ import { connect } from 'react-redux';
 import { updateNameAction } from '../ducks/standardReducerExample';
 
 class Profile extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      name: ''
-    };
-  }
   render() {
     return (
       <div>
@@ -56,6 +50,6 @@ const mapStateToProps = state => state;
 //This is often done in a single line of code like this:
 export default connect(
   mapStateToProps,
-  // using object shorthand, in longform would be { updateNameAction: updateNameAction}
   { updateNameAction }
 )(Profile);
+// using object shorthand, in longform would be { updateNameAction: updateNameAction}

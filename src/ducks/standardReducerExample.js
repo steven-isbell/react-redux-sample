@@ -12,7 +12,7 @@ export function updateNameAction(name) {
 // INITIAL STATE
 
 const initialState = {
-  name: 'Steven'
+  name: 'Jeff'
 };
 
 // REDUCER
@@ -22,7 +22,11 @@ const initialState = {
 export default function standardReducerExample(state = initialState, action) {
   switch (action.type) {
     case UPDATE_NAME:
-      return Object.assign({}, state, { name: action.payload });
+      // return Object.assign({}, state, { name: action.payload });
+      return {
+        ...state,
+        name: action.payload
+      };
     // Can Also Be Written in es8 object rest spread `return { ...state, name: action.payload }`
     default:
       return state;
