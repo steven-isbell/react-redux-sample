@@ -27,6 +27,12 @@ export default function asyncReducerExample(state = initialState, action) {
         isLoading: false,
         people: action.payload.data
       };
+    case `${GET_PEOPLE}_REJECTED`:
+      return {
+        ...state,
+        isLoading: false,
+        errMessage: action.payload.data.message
+      }
     default:
       return state;
   }

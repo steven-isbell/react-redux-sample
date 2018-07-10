@@ -6,7 +6,8 @@ const store = createStore(standardReducerExample);
 
 export default store;
 
-//STORE WITH MIDDLEWARE
+// ********** STORE WITH MIDDLEWARE **************
+
 // import { createStore, applyMiddleware } from 'redux'; //Notice redux, not react-redux
 // import standardReducerExample from './ducks/standardReducerExample';
 // import promiseMiddleware from 'redux-promise-middleware';
@@ -19,7 +20,8 @@ export default store;
 
 // export default store; //The store is used in index.js by the react-redux top level provider
 
-//STORE WITH MULTIPLE REDUCERS
+// ********** STORE WITH MULTIPLE REDUCERS ********
+
 // import { createStore, combineReducers } from 'redux'; //Notice redux, not react-redux
 // import standardReducerExample from './ducks/standardReducerExample';
 // import asyncReducerExample from './ducks/asyncReducerExample';
@@ -31,7 +33,8 @@ export default store;
 
 // export default store; //The store is used in index.js by the react-redux top level provider
 
-//STORE WITH MULTIPLE REDUCERS AND MIDDLEWARES
+// *********** STORE WITH MULTIPLE REDUCERS AND MIDDLEWARES *********
+
 // import { createStore, combineReducers, applyMiddleware } from 'redux'; //Notice redux, not react-redux
 // import standardReducerExample from './ducks/standardReducerExample';
 // import asyncReducerExample from './ducks/asyncReducerExample';
