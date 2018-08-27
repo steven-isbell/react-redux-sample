@@ -33,9 +33,9 @@ export default store;
 
 // export default store; //The store is used in index.js by the react-redux top level provider
 
-// *********** STORE WITH MULTIPLE REDUCERS AND MIDDLEWARES *********
+// *********** STORE WITH MULTIPLE REDUCERS AND MIDDLEWARES AND DEVTOOLS *********
 
-// import { createStore, combineReducers, applyMiddleware } from 'redux'; //Notice redux, not react-redux
+// import { createStore, combineReducers, applyMiddleware, compose } from 'redux'; //Notice redux, not react-redux
 // import standardReducerExample from './ducks/standardReducerExample';
 // import asyncReducerExample from './ducks/asyncReducerExample';
 // import promiseMiddleware from 'redux-promise-middleware';
@@ -44,7 +44,10 @@ export default store;
 //   profile: standardReducerExample,
 //   people: asyncReducerExample
 // });
-// let storeMiddleware = applyMiddleware(promiseMiddleware());
+
+/////// DEVTOOLS wrap middlewares
+// const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+// let storeMiddleware = composeEnhancers(applyMiddleware(promiseMiddleware()));
 
 // let store = createStore(multipleReducers, storeMiddleware);
 
