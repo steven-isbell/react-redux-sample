@@ -25,7 +25,6 @@ export default store;
 // import { createStore, combineReducers } from 'redux'; //Notice redux, not react-redux
 // import standardReducerExample from './ducks/standardReducerExample';
 // import asyncReducerExample from './ducks/asyncReducerExample';
-// import promiseMiddleware from 'redux-promise-middleware';
 
 // let multipleReducers = combineReducers({ profile: standardReducerExample, people: asyncReducerExample });
 
